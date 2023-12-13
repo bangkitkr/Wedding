@@ -1,0 +1,481 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+:root {
+  --primary: #b6895b;
+  --bg: #383535;
+  --main-font: Verdana, Geneva, Tahoma, sans-serif;
+  --font2: "Moon Dance", cursive;
+  --font3: "Great Vibes", cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--main-font);
+  font-size: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: var(--primary);
+  position: fixed;
+}
+nav .logo {
+  padding: 20px 20px;
+  color: rgba(255, 255, 255);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  margin: 0 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 20px 10px;
+}
+
+nav ul li a {
+  color: rgba(255, 255, 255);
+}
+
+nav ul li .active {
+  color: var(--bg);
+  transition: 0.3s ease-in-out;
+  padding: 0.3rem;
+  border-bottom: 2px solid var(--bg);
+}
+
+nav ul li a:hover {
+  color: var(--bg);
+  transition: 0.2s ease-in-out;
+}
+
+#hamburger-menu {
+  display: none;
+  margin: 0 20px;
+}
+
+/* Home Section Start */
+.home {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  color: rgb(46, 46, 46);
+}
+
+.home .content {
+  padding: 1.5rem 7%;
+  max-width: 60rem;
+}
+
+.home .content h3 {
+  font-size: 20px;
+  color: rgb(46, 46, 46);
+}
+
+.home .content h1 {
+  font-size: 40px;
+
+  margin: 0 0 1.5rem 0;
+}
+
+.home .content h1 span {
+  color: var(--primary);
+}
+
+.home .content a {
+  color: rgb(46, 46, 46);
+  padding: 0.5rem 1.9rem;
+  border: 2px solid var(--primary);
+  border-radius: 1.5rem;
+}
+
+.home .content a:hover {
+  background-color: var(--primary);
+  transition: 0.3s ease-in-out;
+}
+/* Home Section End */
+
+/* About Section Start */
+.about {
+  padding: 7rem 5rem;
+  margin: auto;
+  background-color: rgb(228, 228, 228);
+  min-height: 100vh;
+}
+
+.about h1 {
+  text-align: center;
+  margin: 1rem auto;
+  font-size: 45px;
+  font-family: var(--font3);
+}
+
+.about .row {
+  display: flex;
+  margin: 0.1rem 0.5rem;
+  padding: 1% 0;
+  font-family: var(--main-font);
+  border: 2px solid var(--bg);
+}
+
+.about .row .bride-card {
+  text-align: center;
+  margin: 2rem;
+  padding: 1rem 2rem;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  background-color: var(--primary);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about .row .bride-card img {
+  border: 3px solid var(--bg);
+  border-radius: 50%;
+}
+
+.about .row .bride-card .bride-card-name {
+  font-family: var(--font2);
+  margin: 1rem 0 0;
+  font-size: 2rem;
+  color: var(--bg);
+}
+
+.about .row .text {
+  margin: 1rem 2rem 1rem 2rem;
+  padding: 1%;
+}
+
+.about .row .text h1 {
+  font-size: 32px;
+}
+
+.about .row .text p {
+  font-family: var(--main-font);
+  font-size: 18px;
+  text-align: center;
+}
+/* About Section End */
+
+/* Story Section Start */
+#story {
+  padding: 7rem 10rem 0;
+  min-height: 100vh;
+}
+
+.story h1 {
+  text-align: center;
+  margin: auto;
+  font-size: 45px;
+  font-family: var(--font3);
+}
+
+/* Story Section End */
+
+/* Gallery Section Start */
+.gallery {
+  padding: 4rem 5% 5rem;
+  background-color: rgb(228, 228, 228);
+  /* min-height: 100vh; */
+  border-bottom: solid #383535;
+}
+
+.gallery h1 {
+  margin: 2rem;
+  padding: 0 0 1rem;
+  border-bottom: solid var(--primary);
+  text-align: center;
+  font-size: 45px;
+  font-family: var(--font3);
+}
+
+.gallery .row-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-gap: 5px;
+}
+
+.gallery .row-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* Gallery Section End */
+
+/* Schadule Section Start */
+.schadule {
+  padding: 3rem 0 5rem;
+  background-color: rgb(228, 228, 228);
+  /* min-height: 100vh; */
+}
+.schadule .countdownTitle {
+  margin: 5rem 0 2rem 0;
+}
+
+.schadule h1 {
+  text-align: center;
+  font-size: 45px;
+  font-family: var(--font3);
+}
+.schadule h2 {
+  text-align: center;
+}
+.schadule .countdown-ended {
+  display: none;
+  text-align: center;
+  margin: 1rem auto;
+  font-size: 18px;
+  color: red;
+}
+.schadule .countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.schadule .countdown div {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 0 10px;
+}
+
+.countdown div span {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--bg);
+  background-color: var(--primary);
+  padding: 2rem;
+  border: 1px solid var(--bg);
+  border-radius: 30%;
+  box-shadow: 0px 2px 10px var(--bg);
+  display: block;
+}
+
+.countdown div div {
+  margin-top: 5px;
+  font-size: 0.8rem;
+  color: #333;
+}
+
+.schadule .card {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3rem auto;
+  padding: 2rem 5rem 1rem;
+  max-width: 50%;
+  justify-content: center;
+  background-color: rgba(182, 137, 91, 50%);
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px var(--primary);
+}
+
+.schadule .card .maps {
+  width: 100%;
+  height: 500px;
+  margin: 1rem 0 0;
+  border: 2px solid var(--bg);
+  object-fit: cover;
+}
+
+.schadule .card .card-body {
+  margin: 1rem;
+  padding: 3rem;
+  background-color: rgb(235, 235, 235);
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px var(--bg);
+}
+
+.schadule .card .card-body .card-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 1px solid var(--bg);
+  margin-bottom: 10px;
+}
+
+.schadule .card .card-body .card-text {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.schadule .card .card-body .card-text i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+/* Schadule Section End */
+
+/* RSVP Section Start */
+#RSVP {
+  padding: 7rem 10rem 0;
+  min-height: 100vh;
+}
+
+.RSVP h1 {
+  text-align: center;
+  margin: auto;
+  font-size: 45px;
+  font-family: var(--font3);
+}
+/* RSVP Section End */
+
+/* Footer Start*/
+footer {
+  display: inline-block;
+  width: 100%;
+  align-items: center;
+  background-color: var(--bg);
+  color: rgba(255, 255, 255);
+}
+
+footer p {
+  margin: 5px 20px;
+  text-align: center;
+  font-size: 13px;
+}
+
+footer p span {
+  font-weight: 700;
+  color: rgb(255, 0, 0);
+}
+
+footer p a {
+  color: rgba(255, 0, 0);
+}
+
+footer p a:hover {
+  color: rgba(255, 255, 255);
+}
+/* Footer End*/
+
+/* Media Query */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 95%;
+  }
+
+  .gallery .row-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 20px;
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .about .row .bride-card {
+    max-width: 80%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  nav #hamburger-menu {
+    display: inline-block;
+  }
+
+  nav ul {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background: #fff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+    margin: 0;
+  }
+
+  nav ul.active {
+    right: 0;
+  }
+
+  nav ul li {
+    width: 280px;
+    /* margin: 1rem 0; */
+    padding: 0rem 1rem;
+  }
+
+  nav ul li .active {
+    color: var(--primary);
+    border-bottom: 0;
+  }
+
+  nav ul li a {
+    color: var(--bg);
+    display: block;
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 2rem;
+    text-overflow: clip;
+  }
+
+  nav ul li:hover {
+    background-color: var(--bg);
+  }
+
+  nav ul li a:hover {
+    color: var(--primary);
+  }
+
+  nav ul li a::after {
+    transform-origin: 0 0;
+  }
+
+  nav ul li a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .about p {
+    font-size: 1.5rem;
+    max-width: 50rem;
+  }
+
+  .about .row .bride-card {
+    margin: 1rem 0 1rem 0;
+  }
+
+  .about .row .bride-card .bride-card-img {
+    max-width: 90%;
+  }
+
+  .about .row .bride-card .bride-card-name {
+    font-size: 3.3rem;
+  }
+
+  .about .row .bride-card .bride-card-family,
+  .about .row .bride-card h4 {
+    font-size: 1.5rem;
+  }
+
+  .gallery .row-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 20px;
+  }
+}
+/* Mobile Phone */
+@media (max-width: 450) {
+}
